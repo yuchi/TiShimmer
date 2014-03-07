@@ -1,39 +1,32 @@
-// This is a test harness for your module
-// You should do something interesting in this harness 
-// to test out the module and to provide instructions 
-// to users on how to use it by example.
-
-
-// open a single window
 var win = Ti.UI.createWindow({
 	backgroundColor:'white'
 });
-var label = Ti.UI.createLabel();
-win.add(label);
+var Shimmer = require('it.scsoft.shimmer');
+var img = Ti.UI.createImageView({
+	image:'prova.jpg',
+	width:Ti.UI.FILL,
+	height:Ti.UI.FILL
+});
+
+
+var v = Shimmer.createShimmerView({
+	bottom:30,
+	width:180,
+	height:30,
+	label:{
+		text:'Loading...',
+		textAlign:Ti.UI.TEXT_ALIGNMENT_CENTER,
+		color:'black',
+		fontSize:30,
+		//fontFamily:''
+	}
+});
+
+img.add(v);
+win.add(img);
 win.open();
 
-// TODO: write your module tests here
-var Shimmer = require('it.scsoft.shimmer');
-Ti.API.info("module is => " + Shimmer);
 
-label.text = Shimmer.example();
-
-Ti.API.info("module exampleProp is => " + Shimmer.exampleProp);
-Shimmer.exampleProp = "This is a test value";
-
-if (Ti.Platform.name == "android") {
-	var proxy = Shimmer.createExample({
-		message: "Creating an example Proxy",
-		backgroundColor: "red",
-		width: 100,
-		height: 100,
-		top: 100,
-		left: 150
-	});
-
-	proxy.printMessage("Hello world!");
-	proxy.message = "Hi world!.  It's me again.";
-	proxy.printMessage("Hello world!");
-	win.add(proxy);
-}
+v.speed = 180;
+v.opacity = 0.1;
 
