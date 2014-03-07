@@ -1,0 +1,18 @@
+#
+# this is your module manifest and used by Titanium
+# during compilation, packaging, distribution, etc.
+#
+version: 1.0
+apiversion: 2
+description: My module
+author: Samuele Coppede'
+license: Specify your license
+copyright: Copyright (c) 2014 by Your Company
+
+
+# these should not be edited
+name: Shimmer
+moduleid: it.scsoft.shimmer
+guid: db728048-4bc4-46d5-a9b7-b78798384574
+platform: iphone
+minsdk: 3.2.0.GA
