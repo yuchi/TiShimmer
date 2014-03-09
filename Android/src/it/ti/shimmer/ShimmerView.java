@@ -183,7 +183,7 @@ public class ShimmerView extends TiUIView {
                 float x0 = (0 - width - shimSize) * (1 - maskX);
                 float x1 = x0 + gradientSize;
 
-                float shimInitialPosition = 0.5f - (shimPercent / (1 + shimPercent) / 2);
+                float shimInitialPosition = width / gradientSize;
                 float shimFinalPosition = 1 - shimInitialPosition;
 
                 Shader shader = new LinearGradient(
