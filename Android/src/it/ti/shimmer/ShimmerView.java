@@ -4,6 +4,7 @@ import android.animation.Animator;
 import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
 import android.content.Context;
+import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.LinearGradient;
@@ -175,6 +176,9 @@ public class ShimmerView extends TiUIView {
                 int width = canvas.getWidth();
                 int height = canvas.getHeight();
 
+                Bitmap bitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888);
+                Canvas buffer = new Canvas(bitmap);
+
                 Paint paint = new Paint();
 
                 paint.setFilterBitmap(false);
@@ -204,9 +208,11 @@ public class ShimmerView extends TiUIView {
                 paint.setShader(shader);
                 paint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.DST_IN));
 
-                super.dispatchDraw(canvas);
+                super.dispatchDraw(buffer);
 
-                canvas.drawPaint(paint);
+                buffer.drawPaint(paint);
+
+                canvas.drawBitmap(bitmap, 0, 0, null);
             }
             else {
                 super.dispatchDraw(canvas);
