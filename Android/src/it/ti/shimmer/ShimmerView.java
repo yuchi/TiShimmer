@@ -183,8 +183,10 @@ public class ShimmerView extends TiUIView {
 
                 paint.setFilterBitmap(false);
 
-                int highColor = Color.argb(clamp(fullOpacity, shimOpacity, maskFactor), 255, 255, 255);
-                int lowColor = Color.argb(clamp(fullOpacity, dimOpacity, maskFactor), 255, 255, 255);
+                int highColor =
+                    Color.argb(clamp(fullOpacity, shimOpacity, maskFactor), 255, 255, 255);
+                int lowColor =
+                    Color.argb(clamp(fullOpacity, dimOpacity, maskFactor), 255, 255, 255);
 
                 float shimSize = width * shimPercent;
                 float gradientSize = width * 2 + shimSize;
@@ -196,14 +198,10 @@ public class ShimmerView extends TiUIView {
                 float shimFinalPosition = 1 - shimInitialPosition;
 
                 Shader shader = new LinearGradient(
-                        x0, 0, x1, 0,
-                        new int[] {
-                            lowColor, lowColor, highColor, lowColor, lowColor
-                        },
-                        new float[] {
-                            0, shimInitialPosition, 0.5f, shimFinalPosition, 1
-                        },
-                        Shader.TileMode.CLAMP);
+                    x0, 0, x1, 0,
+                    new int[] { lowColor, lowColor, highColor, lowColor, lowColor },
+                    new float[] { 0, shimInitialPosition, 0.5f, shimFinalPosition, 1 },
+                    Shader.TileMode.CLAMP);
 
                 paint.setShader(shader);
                 paint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.DST_IN));
