@@ -29,9 +29,9 @@ public class ShimmerView extends TiUIView {
     protected float maskX = 0.0f;
     protected float maskFactor = 0.0f;
 
-    protected long introDuration = 300;
+    protected long shimmeringBeginFadeDuration = 300;
     protected long shimmeringSpeed = 2000;
-    protected float shimPercent = 0.2f;
+    protected float shimmeringRelativeSize = 0.2f;
 
     protected int fullOpacity = 0xFF;
     protected int dimOpacity = 0x70;
@@ -85,7 +85,7 @@ public class ShimmerView extends TiUIView {
         });
 
         introAnimator = ObjectAnimator.ofFloat(this, "maskFactor", 1.0f);
-        introAnimator.setDuration(introDuration);
+        introAnimator.setDuration(shimmeringBeginFadeDuration);
         introAnimator.setRepeatCount(0);
         introAnimator.addListener(new Animator.AnimatorListener() {
 
@@ -188,7 +188,7 @@ public class ShimmerView extends TiUIView {
                 int lowColor =
                     Color.argb(clamp(fullOpacity, dimOpacity, maskFactor), 255, 255, 255);
 
-                float shimSize = width * shimPercent;
+                float shimSize = width * shimmeringRelativeSize;
                 float gradientSize = width * 2 + shimSize;
 
                 float x0 = (0 - width - shimSize) * (1 - maskX);
