@@ -30,7 +30,7 @@ public class ShimmerView extends TiUIView {
     protected float maskFactor = 0.0f;
 
     protected long introDuration = 300;
-    protected long shimDuration = 2000;
+    protected long shimmeringSpeed = 2000;
     protected float shimPercent = 0.2f;
 
     protected int fullOpacity = 0xFF;
@@ -59,7 +59,7 @@ public class ShimmerView extends TiUIView {
         view = new ShimmerCompositeLayout(proxy.getActivity(), arrangement, proxy);
 
         maskAnimator = ObjectAnimator.ofFloat(this, "maskX", 0.0f, 1.0f);
-        maskAnimator.setDuration(shimDuration);
+        maskAnimator.setDuration(shimmeringSpeed);
         maskAnimator.setRepeatCount(ValueAnimator.INFINITE);
         maskAnimator.addListener(new Animator.AnimatorListener() {
 
