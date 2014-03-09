@@ -57,31 +57,26 @@ public class ShimmerViewProxy extends TiViewProxy {
 
     @Kroll.method
     public void startShimming() {
-        System.out.println("startShimming?");
         if (TiApplication.isUIThread()) {
             handleStartShimming();
         }
         else {
-            System.out.println("startShimming? Not UI");
             TiMessenger.sendBlockingMainMessage(getMainHandler().obtainMessage(MSG_START_SHIMMING));
         }
     }
 
     @Kroll.method
     public void endShimming() {
-        System.out.println("endShimming?");
         if (TiApplication.isUIThread()) {
             handleEndShimming();
         }
         else {
-            System.out.println("endShimming? Not UI");
             TiMessenger.sendBlockingMainMessage(getMainHandler().obtainMessage(MSG_END_SHIMMING));
         }
     }
 
     @Kroll.method
     public void stopShimming() {
-        System.out.println("stopShimming?");
         endShimming();
     }
 
@@ -91,9 +86,6 @@ public class ShimmerViewProxy extends TiViewProxy {
         if (view != null) {
             ((ShimmerView)view).startShimming();
         }
-        else {
-            System.out.println(" handleStartShimming -- whaat? ");
-        }
     }
 
     public void handleEndShimming() {
@@ -101,9 +93,6 @@ public class ShimmerViewProxy extends TiViewProxy {
 
         if (view != null) {
             ((ShimmerView)view).endShimming();
-        }
-        else {
-            System.out.println(" handleEndShimming -- whaat? ");
         }
     }
 
