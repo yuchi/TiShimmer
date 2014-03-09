@@ -32,6 +32,10 @@ public class ShimmerView extends TiUIView {
     protected long shimDuration = 2000;
     protected float shimPercent = 0.2f;
 
+    protected int fullOpacity = 0xFF;
+    protected int dimOpacity = 0x70;
+    protected int shimOpacity = 0xFF;
+
     protected boolean shimming = false;
 
     public static final String TAG = "Shimmer";
@@ -168,14 +172,15 @@ public class ShimmerView extends TiUIView {
         @Override
         public void dispatchDraw(Canvas canvas) {
             if (maskFactor > 0) {
+                int width = canvas.getWidth();
+                int height = canvas.getHeight();
+
                 Paint paint = new Paint();
 
                 paint.setFilterBitmap(false);
 
-                int highColor = Color.argb(clamp(0xFF, 0x70, maskFactor), 255, 255, 255);
-                int lowColor = Color.argb(clamp(0xFF, 0x30, maskFactor), 255, 255, 255);
-
-                int width = canvas.getWidth();
+                int highColor = Color.argb(clamp(fullOpacity, shimOpacity, maskFactor), 255, 255, 255);
+                int lowColor = Color.argb(clamp(fullOpacity, dimOpacity, maskFactor), 255, 255, 255);
 
                 float shimSize = width * shimPercent;
                 float gradientSize = width * 2 + shimSize;
