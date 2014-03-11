@@ -5,10 +5,13 @@
  * Please see the LICENSE included with this distribution for details.
  */
 #import "TiUIView.h"
+#import "FBShimmering.h"
 #import "FBShimmeringView.h"
 
-@interface ItScsoftShimmerShimmerView : TiUIView {
-    FBShimmeringView *shimmeringView;
+@interface ItScsoftShimmerShimmerView : TiUIView <FBShimmering> {
+    /*FBShimmeringView *shimmeringView;*/
 }
+
+- (void) setShimmering_: (id) args;
 
 @end

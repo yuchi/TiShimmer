@@ -5,11 +5,38 @@
  * Please see the LICENSE included with this distribution for details.
  */
 
-#import "ItScsoftShimmerShimmerViewProxy.h"
 #import "TiUtils.h"
+#import "FBShimmeringLayer.h"
+#import "ItScsoftShimmerShimmerView.h"
+#import "ItScsoftShimmerShimmerViewProxy.h"
 
 @implementation ItScsoftShimmerShimmerViewProxy
 
+
+- (void) add: (id) arg
+{
+
+    NSLog(@"Bah");
+
+    [super add:arg];
+
+    if (![NSThread isMainThread])
+    {
+        return;
+    }
+
+    if ([arg isKindOfClass:[NSArray class]])
+	{
+		arg = [arg objectAtIndex:0];
+	}
+
+    NSLog(@"Mhh");
+
+    ItScsoftShimmerShimmerView * theView = (ItScsoftShimmerShimmerView *)[self view];
+    FBShimmeringLayer * theLayer = (FBShimmeringLayer *)theView.layer;
+
+    theLayer.contentLayer = [arg view].layer;
+}
 
 
 @end

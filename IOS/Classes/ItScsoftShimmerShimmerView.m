@@ -8,10 +8,70 @@
 #import "ItScsoftShimmerShimmerView.h"
 #import "TiUtils.h"
 #import "FBShimmeringView.h"
+#import "FBShimmeringLayer.h"
 
 @implementation ItScsoftShimmerShimmerView
 
-- (id)initWithFrame:(CGRect)frame
++ (Class)layerClass
+{
+    return [FBShimmeringLayer class];
+}
+
+
+#define __layer ((FBShimmeringLayer *)self.layer)
+
+#define LAYER_ACCESSOR(accessor, ctype) \
+- (ctype)accessor { \
+return [__layer accessor]; \
+}
+
+#define LAYER_MUTATOR(mutator, ctype) \
+- (void)mutator (ctype)value { \
+[__layer mutator value]; \
+}
+
+#define LAYER_RW_PROPERTY(accessor, mutator, ctype) \
+LAYER_ACCESSOR (accessor, ctype) \
+LAYER_MUTATOR (mutator, ctype)
+
+LAYER_RW_PROPERTY(isShimmering, setShimmering:, BOOL);
+LAYER_RW_PROPERTY(shimmeringPauseDuration, setShimmeringPauseDuration:, CFTimeInterval);
+LAYER_RW_PROPERTY(shimmeringOpacity, setShimmeringOpacity:, CGFloat);
+LAYER_RW_PROPERTY(shimmeringSpeed, setShimmeringSpeed:, CGFloat);
+LAYER_ACCESSOR(shimmeringFadeTime, CFTimeInterval);
+LAYER_RW_PROPERTY(shimmeringBeginFadeDuration, setShimmeringBeginFadeDuration:, CFTimeInterval);
+LAYER_RW_PROPERTY(shimmeringEndFadeDuration, setShimmeringEndFadeDuration:, CFTimeInterval);
+
+
+#pragma mark - Public API
+
+
+- (void) setShimmering_: (id) args
+{
+    BOOL value = [TiUtils boolValue:args def:NO];
+
+    if (value)
+    {
+        NSLog(@" YES Ma che bella cosa");
+    }
+    else
+    {
+        NSLog(@" NO Ahi ahi");
+    }
+
+    [self setShimmering:value];
+
+    if ([self isShimmering])
+    {
+        NSLog(@" Yeah");
+    }
+    else
+    {
+        NSLog(@" Ou nou");
+    }
+}
+
+/*- (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
@@ -83,6 +143,6 @@
     //shimmeringBeginFadeDuration
     //shimmeringSpeed
     //shimmeringOpacity
-}
+}*/
 
 @end
