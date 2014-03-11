@@ -66,11 +66,13 @@ public class ShimmerView extends TiUIView {
             @Override
             public void onAnimationStart(Animator animator) {
                 shimming = true;
+                proxy.fireEvent("shimmingstart", null);
             }
 
             @Override
             public void onAnimationEnd(Animator animator) {
                 shimming = false;
+                proxy.fireEvent("shimmingend", null);
             }
 
             @Override
