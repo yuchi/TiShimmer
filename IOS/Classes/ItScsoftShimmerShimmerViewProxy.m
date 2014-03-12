@@ -11,5 +11,25 @@
 @implementation ItScsoftShimmerShimmerViewProxy
 
 
+/*
+-(void)willShow
+{
+     NSLog(@"[INFO] Now SHOW");
+}
 
+-(void)parentWillShow
+{
+     NSLog(@"[INFO] Now parentWillShow");
+}
+
+-(void)windowDidOpen
+{
+      NSLog(@"[INFO] Now windowDidOpen");
+}
+
+-(void)windowWillOpen
+{
+    NSLog(@"[INFO] Now windowWillOpen");
+}
+ */
 @end
