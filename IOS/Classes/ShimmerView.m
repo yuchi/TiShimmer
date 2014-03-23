@@ -29,20 +29,6 @@ LAYER_ACCESSOR (accessor, ctype) \
 LAYER_MUTATOR (mutator, ctype)
 
 
-UIViewController * ControllerForViewProxy(TiViewProxy * proxy)
-{
-    [[proxy view] setAutoresizingMask:UIViewAutoresizingNone];
-    
-    //make the proper resize !
-    TiThreadPerformOnMainThread(^{
-        [proxy windowWillOpen];
-        [proxy reposition];
-        [proxy windowDidOpen];
-    },YES);
-    return [[TiViewController alloc] initWithViewProxy:proxy];
-}
-
-
 @implementation ItTiShimmerView
 
 
