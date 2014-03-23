@@ -30,28 +30,40 @@
  */
 
 
+- (void)startShimmering:(id)args
+{
+    ENSURE_UI_THREAD(startShimmering, args);
+    __view.shimmering = YES;
+}
+
+- (void)stopShimmering:(id)args
+{
+    ENSURE_UI_THREAD(stopShimmering, args);
+    __view.shimmering = NO;
+}
+
 - (void)setShimmering:(id)args
 {
     ENSURE_UI_THREAD(setShimmering, args);
-    [__view setShimmering:[TiUtils boolValue:args def:NO]];
+    __view.shimmering = [TiUtils boolValue:args def:NO];
 }
 
 - (void)setShimmeringOpacity:(id)args
 {
     ENSURE_UI_THREAD(setShimmeringOpacity, args);
-    [__view setShimmeringOpacity:[TiUtils floatValue:args]];
+    __view.shimmeringOpacity = [TiUtils floatValue:args];
 }
 
 - (void)setShimmeringSpeed:(id)args
 {
     ENSURE_UI_THREAD(setShimmeringSpeed, args);
-    [__view setShimmeringSpeed:[TiUtils floatValue:args]];
+    __view.shimmeringSpeed = [TiUtils floatValue:args];
 }
 
 - (void)setShimmeringHighlightWidth:(id)args
 {
     ENSURE_UI_THREAD(setShimmeringHighlightWidth, args);
-    [__view setShimmeringHighlightWidth:[TiUtils floatValue:args]];
+    __view.shimmeringHighlightWidth = [TiUtils floatValue:args];
 }
 
 - (void)setShimmeringDirection:(id)args
@@ -59,11 +71,11 @@
     NSString *direction = [[TiUtils stringValue:args] lowercaseString];
     if ([direction isEqualToString:@"left"])
     {
-        __view.shimmeringDirection = FBShimmerDirectionLeft;
+        [self setViewShimmeringDirection:FBShimmerDirectionLeft];
     }
     else if ([direction isEqualToString:@"right"])
     {
-        __view.shimmeringDirection = FBShimmerDirectionRight;
+        [self setViewShimmeringDirection:FBShimmerDirectionRight];
     }
     else {
         [self throwException:@"Illegal argument"
