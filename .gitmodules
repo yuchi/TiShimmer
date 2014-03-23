@@ -1,0 +1,3 @@
+[submodule "IOS/FBShimmering"]
+	path = IOS/FBShimmering
+	url = git@github.com:yuchi/Shimmer.git
