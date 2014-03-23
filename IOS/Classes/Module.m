@@ -9,7 +9,7 @@
 #import "TiHost.h"
 #import "TiUtils.h"
 
-@implementation ItScsoftShimmerModule
+@implementation ItTiShimmerModule
 
 #pragma mark Internal
 
@@ -22,7 +22,7 @@
 // this is generated for your module, please do not change it
 -(NSString*)moduleId
 {
-	return @"it.scsoft.shimmer";
+	return @"it.ti.shimmer";
 }
 
 #pragma mark Lifecycle

@@ -6,8 +6,6 @@
  */
 #import "TiModule.h"
 
-@interface ItScsoftShimmerModule : TiModule 
-{
-}
+@interface ItTiShimmerModule : TiModule {}
 
 @end

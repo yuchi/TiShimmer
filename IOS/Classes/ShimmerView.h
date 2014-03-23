@@ -7,6 +7,6 @@
 #import "TiUIView.h"
 #import "FBShimmeringLayer.h"
 
-@interface ItScsoftShimmerShimmerView : TiUIView {}
+@interface ItTiShimmerView : TiUIView {}
 
 @end

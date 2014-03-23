@@ -8,7 +8,7 @@
 #import "ShimmerViewProxy.h"
 #import "TiUtils.h"
 
-@implementation ItScsoftShimmerShimmerViewProxy
+@implementation ItTiShimmerViewProxy
 
 
 @end

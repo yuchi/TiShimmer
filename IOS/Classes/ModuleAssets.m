@@ -5,7 +5,7 @@
 
 extern NSData* filterDataInRange(NSData* thedata, NSRange range);
 
-@implementation ItScsoftShimmerModuleAssets
+@implementation ItTiShimmerModuleAssets
 
 - (NSData*) moduleAsset
 {

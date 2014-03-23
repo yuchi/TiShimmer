@@ -43,7 +43,7 @@ UIViewController * ControllerForViewProxy(TiViewProxy * proxy)
 }
 
 
-@implementation ItScsoftShimmerShimmerView
+@implementation ItTiShimmerView
 
 
 +(Class)layerClass

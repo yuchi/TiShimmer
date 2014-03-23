@@ -6,6 +6,6 @@
  */
 #import "TiViewProxy.h"
 
-@interface ItScsoftShimmerShimmerViewProxy : TiViewProxy {}
+@interface ItTiShimmerViewProxy : TiViewProxy {}
 
 @end
