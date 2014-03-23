@@ -31,7 +31,7 @@
 		96A1DC2118DF577800BB10C9 /* ShimmerViewProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A1DC1918DF577800BB10C9 /* ShimmerViewProxy.m */; };
 		96A1DC2A18DF57AC00BB10C9 /* FBShimmering.h in Headers */ = {isa = PBXBuildFile; fileRef = 96A1DC2518DF57AC00BB10C9 /* FBShimmering.h */; };
 		96A1DC2B18DF57AC00BB10C9 /* FBShimmeringLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 96A1DC2618DF57AC00BB10C9 /* FBShimmeringLayer.h */; };
-		96A1DC2C18DF57AC00BB10C9 /* FBShimmeringLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A1DC2718DF57AC00BB10C9 /* FBShimmeringLayer.m */; };
+		96A1DC2C18DF57AC00BB10C9 /* FBShimmeringLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A1DC2718DF57AC00BB10C9 /* FBShimmeringLayer.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		96A1DC3318DF5D5400BB10C9 /* ShimmerModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 96A1DC2F18DF5D5400BB10C9 /* ShimmerModule.h */; };
 		96A1DC3418DF5D5400BB10C9 /* ShimmerModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A1DC3018DF5D5400BB10C9 /* ShimmerModule.m */; };
 		96A1DC3518DF5D5400BB10C9 /* ShimmerModuleAssets.h in Headers */ = {isa = PBXBuildFile; fileRef = 96A1DC3118DF5D5400BB10C9 /* ShimmerModuleAssets.h */; };
