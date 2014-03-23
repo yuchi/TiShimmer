@@ -5,12 +5,29 @@
  * Please see the LICENSE included with this distribution for details.
  */
 
-#import "ItScsoftShimmerShimmerView.h"
+#import "ShimmerView.h"
 #import "TiUtils.h"
 #import "TiBase.h"
 #import "TiViewController.h"
-//#import "TiUIImageViewProxy.h"
-#import "FBShimmeringView.h"
+#import "FBShimmeringLayer.h"
+
+
+#define __layer ((FBShimmeringLayer *)self.layer)
+
+#define LAYER_ACCESSOR(accessor, ctype) \
+- (ctype)accessor { \
+return [__layer accessor]; \
+}
+
+#define LAYER_MUTATOR(mutator, ctype) \
+- (void)mutator (ctype)value { \
+[__layer mutator value]; \
+}
+
+#define LAYER_RW_PROPERTY(accessor, mutator, ctype) \
+LAYER_ACCESSOR (accessor, ctype) \
+LAYER_MUTATOR (mutator, ctype)
+
 
 UIViewController * ControllerForViewProxy(TiViewProxy * proxy)
 {
@@ -28,6 +45,13 @@ UIViewController * ControllerForViewProxy(TiViewProxy * proxy)
 
 @implementation ItScsoftShimmerShimmerView
 
+
++(Class)layerClass
+{
+    return [FBShimmeringLayer class];
+}
+
+
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
@@ -37,81 +61,16 @@ UIViewController * ControllerForViewProxy(TiViewProxy * proxy)
     return self;
 }
 
--(FBShimmeringView *)shimmergingView
-{
-    if(shimmeringView == nil){
-        shimmeringView = [[FBShimmeringView alloc] initWithFrame:[self frame]];
-        
 
-        if([self.proxy valueForUndefinedKey:@"label"] != nil){
-            NSDictionary *args = [self.proxy valueForUndefinedKey:@"label"];
-            UILabel *label =[[UILabel alloc] initWithFrame:shimmeringView.bounds];
-            label.text =[TiUtils stringValue:@"text" properties:args def:@""];
-            label.textAlignment = [TiUtils intValue:[TiUtils stringValue:@"textAlign" properties:args def:@"0"]];
-            label.textColor = [[TiUtils colorValue:[TiUtils stringValue:@"color" properties:args def:@"black"]] _color];
-            label.font = [UIFont fontWithName:
-                          [TiUtils stringValue:@"fontFamily" properties:args def:@"HelveticaNeue"]
-                                         size:[TiUtils floatValue:[TiUtils stringValue:@"fontSize" properties:args def:@"40.0"]]];
-            shimmeringView.contentView = label;
-        }
-        
-        
-        
-        if([self.proxy valueForUndefinedKey:@"subview"] != nil){
-            TiViewProxy *ob = [self.proxy valueForUndefinedKey:@"subview"];
-            shimmeringView.contentView = ob.view;
-        }
-       
-       
-        
-        if([self.proxy valueForUndefinedKey:@"speed"] != nil){
-            shimmeringView.shimmeringSpeed = fmaxf(0.0, fminf(1000.0,  [TiUtils floatValue:[self.proxy valueForUndefinedKey:@"speed"]]));
-        }else{
-            shimmeringView.shimmeringSpeed = 50.0f;
-        }
-        
-        if([self.proxy valueForUndefinedKey:@"opacity"] != nil){
-            shimmeringView.shimmeringOpacity = fmaxf(0.0, fminf(1.0,[TiUtils floatValue:[self.proxy valueForUndefinedKey:@"opacity"]]));
-        }else{
-            shimmeringView.shimmeringOpacity = 0.5f;
-        }
-        
-        shimmeringView.shimmering = YES;
-        
-        [self addSubview:shimmeringView];
-    }
-    return shimmeringView;
-}
+LAYER_RW_PROPERTY(isShimmering, setShimmering:, BOOL)
+LAYER_RW_PROPERTY(shimmeringPauseDuration, setShimmeringPauseDuration:, CFTimeInterval)
+LAYER_RW_PROPERTY(shimmeringOpacity, setShimmeringOpacity:, CGFloat)
+LAYER_RW_PROPERTY(shimmeringSpeed, setShimmeringSpeed:, CGFloat)
+LAYER_RW_PROPERTY(shimmeringHighlightWidth, setShimmeringHighlightWidth:, CGFloat)
+LAYER_RW_PROPERTY(shimmeringDirection, setShimmeringDirection:, FBShimmerDirection)
+LAYER_ACCESSOR(shimmeringFadeTime, CFTimeInterval)
+LAYER_RW_PROPERTY(shimmeringBeginFadeDuration, setShimmeringBeginFadeDuration:, CFTimeInterval)
+LAYER_RW_PROPERTY(shimmeringEndFadeDuration, setShimmeringEndFadeDuration:, CFTimeInterval)
 
 
-
--(void)frameSizeChanged:(CGRect)frame bounds:(CGRect)bounds
-{
-    if (shimmeringView!=nil)
-    {
-        [TiUtils setView:shimmeringView positionRect:bounds];
-        
-    }
-}
-
--(void)setSpeed_:(id)speed
-{
-    
-     [[self shimmergingView] setShimmeringSpeed:fmaxf(0.0, fminf(1000.0, [TiUtils floatValue:speed]))];
-}
-
--(void)setOpacity_:(id)opacity
-{
-     [[self shimmergingView] setShimmeringOpacity:fmaxf(0.0, fminf(1.0, [TiUtils floatValue:opacity]))];
-}
-
--(void)setBeginfade_:(id)beginfade
-{
-    [[self shimmergingView] setShimmeringBeginFadeDuration:fmaxf(0.0, fminf(1.0, [TiUtils floatValue:beginfade]))];
-}
-
--(void)setEndfade_:(id)endfade
-{
-     [[self shimmergingView] setShimmeringEndFadeDuration:fmaxf(0.0, fminf(1.0, [TiUtils floatValue:endfade]))];
-}
 @end
