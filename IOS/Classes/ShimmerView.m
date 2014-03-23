@@ -29,10 +29,10 @@ LAYER_ACCESSOR (accessor, ctype) \
 LAYER_MUTATOR (mutator, ctype)
 
 
-@implementation ItTiShimmerView
+@implementation ItTiShimmerShimmeringView {}
 
 
-+(Class)layerClass
++ (Class)layerClass
 {
     return [FBShimmeringLayer class];
 }

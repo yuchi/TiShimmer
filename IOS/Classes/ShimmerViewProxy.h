@@ -4,8 +4,9 @@
  * Licensed under the terms of the Apache Public License
  * Please see the LICENSE included with this distribution for details.
  */
+#import "FBShimmering.h"
 #import "TiViewProxy.h"
 
-@interface ItTiShimmerViewProxy : TiViewProxy {}
+@interface ItTiShimmerShimmeringViewProxy : TiViewProxy
 
 @end

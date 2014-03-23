@@ -7,6 +7,27 @@
 #import "TiUIView.h"
 #import "FBShimmeringLayer.h"
 
-@interface ItTiShimmerView : TiUIView {}
+
+#define LAYER_ACCESSOR_PROTOTYPE(accessor, ctype) \
+- (ctype)accessor;
+
+#define LAYER_MUTATOR_PROTOTYPE(mutator, ctype) \
+- (void)mutator (ctype)value;
+
+#define LAYER_RW_PROPERTY_PROTOTYPE(accessor, mutator, ctype) \
+LAYER_ACCESSOR_PROTOTYPE (accessor, ctype) \
+LAYER_MUTATOR_PROTOTYPE (mutator, ctype)
+
+@interface ItTiShimmerShimmeringView : TiUIView {}
+
+LAYER_RW_PROPERTY_PROTOTYPE(isShimmering, setShimmering:, BOOL)
+LAYER_RW_PROPERTY_PROTOTYPE(shimmeringPauseDuration, setShimmeringPauseDuration:, CFTimeInterval)
+LAYER_RW_PROPERTY_PROTOTYPE(shimmeringOpacity, setShimmeringOpacity:, CGFloat)
+LAYER_RW_PROPERTY_PROTOTYPE(shimmeringSpeed, setShimmeringSpeed:, CGFloat)
+LAYER_RW_PROPERTY_PROTOTYPE(shimmeringHighlightWidth, setShimmeringHighlightWidth:, CGFloat)
+LAYER_RW_PROPERTY_PROTOTYPE(shimmeringDirection, setShimmeringDirection:, FBShimmerDirection)
+LAYER_ACCESSOR_PROTOTYPE(shimmeringFadeTime, CFTimeInterval)
+LAYER_RW_PROPERTY_PROTOTYPE(shimmeringBeginFadeDuration, setShimmeringBeginFadeDuration:, CFTimeInterval)
+LAYER_RW_PROPERTY_PROTOTYPE(shimmeringEndFadeDuration, setShimmeringEndFadeDuration:, CFTimeInterval)
 
 @end
