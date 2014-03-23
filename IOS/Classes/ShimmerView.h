@@ -5,6 +5,7 @@
  * Please see the LICENSE included with this distribution for details.
  */
 #import "TiUIView.h"
+#import "FBShimmering.h"
 #import "FBShimmeringLayer.h"
 
 
@@ -18,7 +19,7 @@
 LAYER_ACCESSOR_PROTOTYPE (accessor, ctype) \
 LAYER_MUTATOR_PROTOTYPE (mutator, ctype)
 
-@interface ItTiShimmerShimmeringView : TiUIView {}
+@interface ItTiShimmerShimmeringView : TiUIView <FBShimmering> {}
 
 LAYER_RW_PROPERTY_PROTOTYPE(isShimmering, setShimmering:, BOOL)
 LAYER_RW_PROPERTY_PROTOTYPE(shimmeringPauseDuration, setShimmeringPauseDuration:, CFTimeInterval)
