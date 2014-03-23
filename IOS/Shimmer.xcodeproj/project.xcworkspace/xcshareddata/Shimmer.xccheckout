@@ -5,34 +5,34 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>08FE8B47-CD04-4530-9AC3-C089AE14F788</string>
+	<string>33026BE3-06F2-4588-ADD7-E2B10AFDC33F</string>
 	<key>IDESourceControlProjectName</key>
 	<string>Shimmer</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>08553B34-0619-41E9-A0BD-60B00C3649E4</key>
-		<string>https://github.com/yuchi/TiShimmer.git</string>
+		<key>49C9752E-50B4-4C02-BA78-A0D8EB7A2483</key>
+		<string>https://github.com/yuchi/TiShimmer</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>IOS/Shimmer.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>08553B34-0619-41E9-A0BD-60B00C3649E4</key>
+		<key>49C9752E-50B4-4C02-BA78-A0D8EB7A2483</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/yuchi/TiShimmer.git</string>
+	<string>https://github.com/yuchi/TiShimmer</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>08553B34-0619-41E9-A0BD-60B00C3649E4</string>
+	<string>49C9752E-50B4-4C02-BA78-A0D8EB7A2483</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>08553B34-0619-41E9-A0BD-60B00C3649E4</string>
+			<string>49C9752E-50B4-4C02-BA78-A0D8EB7A2483</string>
 			<key>IDESourceControlWCCName</key>
 			<string>TiShimmer</string>
 		</dict>

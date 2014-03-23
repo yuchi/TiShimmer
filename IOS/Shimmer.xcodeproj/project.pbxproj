@@ -22,23 +22,20 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		13F3AB0818C9D8C10050DAC7 /* FBShimmering-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 13F3AB0218C9D8C10050DAC7 /* FBShimmering-Prefix.pch */; };
-		13F3AB0918C9D8C10050DAC7 /* FBShimmering.h in Headers */ = {isa = PBXBuildFile; fileRef = 13F3AB0318C9D8C10050DAC7 /* FBShimmering.h */; };
-		13F3AB0A18C9D8C10050DAC7 /* FBShimmeringLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 13F3AB0418C9D8C10050DAC7 /* FBShimmeringLayer.h */; };
-		13F3AB0B18C9D8C10050DAC7 /* FBShimmeringLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 13F3AB0518C9D8C10050DAC7 /* FBShimmeringLayer.m */; };
-		13F3AB0C18C9D8C10050DAC7 /* FBShimmeringView.h in Headers */ = {isa = PBXBuildFile; fileRef = 13F3AB0618C9D8C10050DAC7 /* FBShimmeringView.h */; };
-		13F3AB0D18C9D8C10050DAC7 /* FBShimmeringView.m in Sources */ = {isa = PBXBuildFile; fileRef = 13F3AB0718C9D8C10050DAC7 /* FBShimmeringView.m */; };
 		13F3AB1118C9D91D0050DAC7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13F3AB1018C9D91D0050DAC7 /* UIKit.framework */; };
 		13F3AB1318C9D9230050DAC7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13F3AB1218C9D9230050DAC7 /* CoreGraphics.framework */; };
-		13F3AB1618C9D9850050DAC7 /* ItScsoftShimmerShimmerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 13F3AB1418C9D9850050DAC7 /* ItScsoftShimmerShimmerView.h */; };
-		13F3AB1718C9D9850050DAC7 /* ItScsoftShimmerShimmerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 13F3AB1518C9D9850050DAC7 /* ItScsoftShimmerShimmerView.m */; };
-		13F3AB1A18C9D9960050DAC7 /* ItScsoftShimmerShimmerViewProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 13F3AB1818C9D9960050DAC7 /* ItScsoftShimmerShimmerViewProxy.h */; };
-		13F3AB1B18C9D9960050DAC7 /* ItScsoftShimmerShimmerViewProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 13F3AB1918C9D9960050DAC7 /* ItScsoftShimmerShimmerViewProxy.m */; };
-		24DD6CF91134B3F500162E58 /* ItScsoftShimmerModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 24DD6CF71134B3F500162E58 /* ItScsoftShimmerModule.h */; };
-		24DD6CFA1134B3F500162E58 /* ItScsoftShimmerModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DD6CF81134B3F500162E58 /* ItScsoftShimmerModule.m */; };
-		24DE9E1111C5FE74003F90F6 /* ItScsoftShimmerModuleAssets.h in Headers */ = {isa = PBXBuildFile; fileRef = 24DE9E0F11C5FE74003F90F6 /* ItScsoftShimmerModuleAssets.h */; };
-		24DE9E1211C5FE74003F90F6 /* ItScsoftShimmerModuleAssets.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DE9E1011C5FE74003F90F6 /* ItScsoftShimmerModuleAssets.m */; };
 		7FDA0BF418D119A4000C4474 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FDA0BF318D119A4000C4474 /* CoreImage.framework */; };
+		96A1DC1E18DF577800BB10C9 /* ShimmerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 96A1DC1618DF577800BB10C9 /* ShimmerView.h */; };
+		96A1DC1F18DF577800BB10C9 /* ShimmerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A1DC1718DF577800BB10C9 /* ShimmerView.m */; };
+		96A1DC2018DF577800BB10C9 /* ShimmerViewProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 96A1DC1818DF577800BB10C9 /* ShimmerViewProxy.h */; };
+		96A1DC2118DF577800BB10C9 /* ShimmerViewProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A1DC1918DF577800BB10C9 /* ShimmerViewProxy.m */; };
+		96A1DC2A18DF57AC00BB10C9 /* FBShimmering.h in Headers */ = {isa = PBXBuildFile; fileRef = 96A1DC2518DF57AC00BB10C9 /* FBShimmering.h */; };
+		96A1DC2B18DF57AC00BB10C9 /* FBShimmeringLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 96A1DC2618DF57AC00BB10C9 /* FBShimmeringLayer.h */; };
+		96A1DC2C18DF57AC00BB10C9 /* FBShimmeringLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A1DC2718DF57AC00BB10C9 /* FBShimmeringLayer.m */; };
+		96A1DC3318DF5D5400BB10C9 /* ShimmerModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 96A1DC2F18DF5D5400BB10C9 /* ShimmerModule.h */; };
+		96A1DC3418DF5D5400BB10C9 /* ShimmerModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A1DC3018DF5D5400BB10C9 /* ShimmerModule.m */; };
+		96A1DC3518DF5D5400BB10C9 /* ShimmerModuleAssets.h in Headers */ = {isa = PBXBuildFile; fileRef = 96A1DC3118DF5D5400BB10C9 /* ShimmerModuleAssets.h */; };
+		96A1DC3618DF5D5400BB10C9 /* ShimmerModuleAssets.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A1DC3218DF5D5400BB10C9 /* ShimmerModuleAssets.m */; };
 		AA747D9F0F9514B9006C5449 /* ItScsoftShimmer_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* ItScsoftShimmer_Prefix.pch */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
 /* End PBXBuildFile section */
@@ -54,24 +51,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		13F3AB0218C9D8C10050DAC7 /* FBShimmering-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FBShimmering-Prefix.pch"; sourceTree = "<group>"; };
-		13F3AB0318C9D8C10050DAC7 /* FBShimmering.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBShimmering.h; sourceTree = "<group>"; };
-		13F3AB0418C9D8C10050DAC7 /* FBShimmeringLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBShimmeringLayer.h; sourceTree = "<group>"; };
-		13F3AB0518C9D8C10050DAC7 /* FBShimmeringLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBShimmeringLayer.m; sourceTree = "<group>"; };
-		13F3AB0618C9D8C10050DAC7 /* FBShimmeringView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBShimmeringView.h; sourceTree = "<group>"; };
-		13F3AB0718C9D8C10050DAC7 /* FBShimmeringView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBShimmeringView.m; sourceTree = "<group>"; };
 		13F3AB1018C9D91D0050DAC7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		13F3AB1218C9D9230050DAC7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		13F3AB1418C9D9850050DAC7 /* ItScsoftShimmerShimmerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ItScsoftShimmerShimmerView.h; path = Classes/ItScsoftShimmerShimmerView.h; sourceTree = "<group>"; };
-		13F3AB1518C9D9850050DAC7 /* ItScsoftShimmerShimmerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ItScsoftShimmerShimmerView.m; path = Classes/ItScsoftShimmerShimmerView.m; sourceTree = "<group>"; };
-		13F3AB1818C9D9960050DAC7 /* ItScsoftShimmerShimmerViewProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ItScsoftShimmerShimmerViewProxy.h; path = Classes/ItScsoftShimmerShimmerViewProxy.h; sourceTree = "<group>"; };
-		13F3AB1918C9D9960050DAC7 /* ItScsoftShimmerShimmerViewProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ItScsoftShimmerShimmerViewProxy.m; path = Classes/ItScsoftShimmerShimmerViewProxy.m; sourceTree = "<group>"; };
-		24DD6CF71134B3F500162E58 /* ItScsoftShimmerModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ItScsoftShimmerModule.h; path = Classes/ItScsoftShimmerModule.h; sourceTree = "<group>"; };
-		24DD6CF81134B3F500162E58 /* ItScsoftShimmerModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ItScsoftShimmerModule.m; path = Classes/ItScsoftShimmerModule.m; sourceTree = "<group>"; };
 		24DD6D1B1134B66800162E58 /* titanium.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = titanium.xcconfig; sourceTree = "<group>"; };
-		24DE9E0F11C5FE74003F90F6 /* ItScsoftShimmerModuleAssets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ItScsoftShimmerModuleAssets.h; path = Classes/ItScsoftShimmerModuleAssets.h; sourceTree = "<group>"; };
-		24DE9E1011C5FE74003F90F6 /* ItScsoftShimmerModuleAssets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ItScsoftShimmerModuleAssets.m; path = Classes/ItScsoftShimmerModuleAssets.m; sourceTree = "<group>"; };
 		7FDA0BF318D119A4000C4474 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		96A1DC1618DF577800BB10C9 /* ShimmerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShimmerView.h; path = Classes/ShimmerView.h; sourceTree = "<group>"; };
+		96A1DC1718DF577800BB10C9 /* ShimmerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShimmerView.m; path = Classes/ShimmerView.m; sourceTree = "<group>"; };
+		96A1DC1818DF577800BB10C9 /* ShimmerViewProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShimmerViewProxy.h; path = Classes/ShimmerViewProxy.h; sourceTree = "<group>"; };
+		96A1DC1918DF577800BB10C9 /* ShimmerViewProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShimmerViewProxy.m; path = Classes/ShimmerViewProxy.m; sourceTree = "<group>"; };
+		96A1DC2518DF57AC00BB10C9 /* FBShimmering.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FBShimmering.h; path = FBShimmering/FBShimmering/FBShimmering.h; sourceTree = "<group>"; };
+		96A1DC2618DF57AC00BB10C9 /* FBShimmeringLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FBShimmeringLayer.h; path = FBShimmering/FBShimmering/FBShimmeringLayer.h; sourceTree = "<group>"; };
+		96A1DC2718DF57AC00BB10C9 /* FBShimmeringLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FBShimmeringLayer.m; path = FBShimmering/FBShimmering/FBShimmeringLayer.m; sourceTree = "<group>"; };
+		96A1DC2818DF57AC00BB10C9 /* FBShimmeringView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FBShimmeringView.h; path = FBShimmering/FBShimmering/FBShimmeringView.h; sourceTree = "<group>"; };
+		96A1DC2918DF57AC00BB10C9 /* FBShimmeringView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FBShimmeringView.m; path = FBShimmering/FBShimmering/FBShimmeringView.m; sourceTree = "<group>"; };
+		96A1DC2F18DF5D5400BB10C9 /* ShimmerModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShimmerModule.h; path = Classes/ShimmerModule.h; sourceTree = "<group>"; };
+		96A1DC3018DF5D5400BB10C9 /* ShimmerModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShimmerModule.m; path = Classes/ShimmerModule.m; sourceTree = "<group>"; };
+		96A1DC3118DF5D5400BB10C9 /* ShimmerModuleAssets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShimmerModuleAssets.h; path = Classes/ShimmerModuleAssets.h; sourceTree = "<group>"; };
+		96A1DC3218DF5D5400BB10C9 /* ShimmerModuleAssets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShimmerModuleAssets.m; path = Classes/ShimmerModuleAssets.m; sourceTree = "<group>"; };
 		AA747D9E0F9514B9006C5449 /* ItScsoftShimmer_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItScsoftShimmer_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D2AAC07E0554694100DB518D /* libItScsoftShimmer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libItScsoftShimmer.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,7 +99,7 @@
 		0867D691FE84028FC02AAC07 /* Shimmer */ = {
 			isa = PBXGroup;
 			children = (
-				13F3AB0118C9D8C10050DAC7 /* FBShimmering */,
+				96A1DC2218DF577F00BB10C9 /* FBShimmer */,
 				08FB77AEFE84172EC02AAC07 /* Classes */,
 				32C88DFF0371C24200C91783 /* Other Sources */,
 				0867D69AFE84028FC02AAC07 /* Frameworks */,
@@ -126,29 +122,16 @@
 		08FB77AEFE84172EC02AAC07 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				24DE9E0F11C5FE74003F90F6 /* ItScsoftShimmerModuleAssets.h */,
-				24DE9E1011C5FE74003F90F6 /* ItScsoftShimmerModuleAssets.m */,
-				24DD6CF71134B3F500162E58 /* ItScsoftShimmerModule.h */,
-				24DD6CF81134B3F500162E58 /* ItScsoftShimmerModule.m */,
-				13F3AB1418C9D9850050DAC7 /* ItScsoftShimmerShimmerView.h */,
-				13F3AB1518C9D9850050DAC7 /* ItScsoftShimmerShimmerView.m */,
-				13F3AB1818C9D9960050DAC7 /* ItScsoftShimmerShimmerViewProxy.h */,
-				13F3AB1918C9D9960050DAC7 /* ItScsoftShimmerShimmerViewProxy.m */,
+				96A1DC2F18DF5D5400BB10C9 /* ShimmerModule.h */,
+				96A1DC3018DF5D5400BB10C9 /* ShimmerModule.m */,
+				96A1DC3118DF5D5400BB10C9 /* ShimmerModuleAssets.h */,
+				96A1DC3218DF5D5400BB10C9 /* ShimmerModuleAssets.m */,
+				96A1DC1618DF577800BB10C9 /* ShimmerView.h */,
+				96A1DC1718DF577800BB10C9 /* ShimmerView.m */,
+				96A1DC1818DF577800BB10C9 /* ShimmerViewProxy.h */,
+				96A1DC1918DF577800BB10C9 /* ShimmerViewProxy.m */,
 			);
 			name = Classes;
-			sourceTree = "<group>";
-		};
-		13F3AB0118C9D8C10050DAC7 /* FBShimmering */ = {
-			isa = PBXGroup;
-			children = (
-				13F3AB0218C9D8C10050DAC7 /* FBShimmering-Prefix.pch */,
-				13F3AB0318C9D8C10050DAC7 /* FBShimmering.h */,
-				13F3AB0418C9D8C10050DAC7 /* FBShimmeringLayer.h */,
-				13F3AB0518C9D8C10050DAC7 /* FBShimmeringLayer.m */,
-				13F3AB0618C9D8C10050DAC7 /* FBShimmeringView.h */,
-				13F3AB0718C9D8C10050DAC7 /* FBShimmeringView.m */,
-			);
-			path = FBShimmering;
 			sourceTree = "<group>";
 		};
 		32C88DFF0371C24200C91783 /* Other Sources */ = {
@@ -160,6 +143,18 @@
 			name = "Other Sources";
 			sourceTree = "<group>";
 		};
+		96A1DC2218DF577F00BB10C9 /* FBShimmer */ = {
+			isa = PBXGroup;
+			children = (
+				96A1DC2518DF57AC00BB10C9 /* FBShimmering.h */,
+				96A1DC2618DF57AC00BB10C9 /* FBShimmeringLayer.h */,
+				96A1DC2718DF57AC00BB10C9 /* FBShimmeringLayer.m */,
+				96A1DC2818DF57AC00BB10C9 /* FBShimmeringView.h */,
+				96A1DC2918DF57AC00BB10C9 /* FBShimmeringView.m */,
+			);
+			name = FBShimmer;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -167,15 +162,13 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				13F3AB0C18C9D8C10050DAC7 /* FBShimmeringView.h in Headers */,
 				AA747D9F0F9514B9006C5449 /* ItScsoftShimmer_Prefix.pch in Headers */,
-				24DD6CF91134B3F500162E58 /* ItScsoftShimmerModule.h in Headers */,
-				13F3AB0818C9D8C10050DAC7 /* FBShimmering-Prefix.pch in Headers */,
-				13F3AB0A18C9D8C10050DAC7 /* FBShimmeringLayer.h in Headers */,
-				13F3AB0918C9D8C10050DAC7 /* FBShimmering.h in Headers */,
-				13F3AB1618C9D9850050DAC7 /* ItScsoftShimmerShimmerView.h in Headers */,
-				13F3AB1A18C9D9960050DAC7 /* ItScsoftShimmerShimmerViewProxy.h in Headers */,
-				24DE9E1111C5FE74003F90F6 /* ItScsoftShimmerModuleAssets.h in Headers */,
+				96A1DC2B18DF57AC00BB10C9 /* FBShimmeringLayer.h in Headers */,
+				96A1DC3318DF5D5400BB10C9 /* ShimmerModule.h in Headers */,
+				96A1DC2A18DF57AC00BB10C9 /* FBShimmering.h in Headers */,
+				96A1DC3518DF5D5400BB10C9 /* ShimmerModuleAssets.h in Headers */,
+				96A1DC2018DF577800BB10C9 /* ShimmerViewProxy.h in Headers */,
+				96A1DC1E18DF577800BB10C9 /* ShimmerView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,12 +241,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				13F3AB0B18C9D8C10050DAC7 /* FBShimmeringLayer.m in Sources */,
-				13F3AB1718C9D9850050DAC7 /* ItScsoftShimmerShimmerView.m in Sources */,
-				24DD6CFA1134B3F500162E58 /* ItScsoftShimmerModule.m in Sources */,
-				24DE9E1211C5FE74003F90F6 /* ItScsoftShimmerModuleAssets.m in Sources */,
-				13F3AB1B18C9D9960050DAC7 /* ItScsoftShimmerShimmerViewProxy.m in Sources */,
-				13F3AB0D18C9D8C10050DAC7 /* FBShimmeringView.m in Sources */,
+				96A1DC2C18DF57AC00BB10C9 /* FBShimmeringLayer.m in Sources */,
+				96A1DC3418DF5D5400BB10C9 /* ShimmerModule.m in Sources */,
+				96A1DC1F18DF577800BB10C9 /* ShimmerView.m in Sources */,
+				96A1DC3618DF5D5400BB10C9 /* ShimmerModuleAssets.m in Sources */,
+				96A1DC2118DF577800BB10C9 /* ShimmerViewProxy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
